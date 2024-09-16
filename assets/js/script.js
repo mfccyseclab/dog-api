@@ -17,6 +17,7 @@ button.addEventListener('click', fetchDogInfo);
   
 //}
 
+
 async function fetchDogInfo() {
   const url = "https://dog.ceo/api/breeds/image/random";
   try {
