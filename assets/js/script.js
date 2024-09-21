@@ -1,21 +1,14 @@
-// Grab html elements
+// Grab html elements (1)
 var button = document.querySelector('.btn');
 var name_ = document.querySelector('.name');
 var image = document.querySelector('.dog');
+var menu = document.querySelector('.menu');
 
-// Event
+// Event (2)
 button.addEventListener('click', fetchDogInfo);
+menu.addEventListener('click', displayMenu);
 
-// Our Functions
-
-//function fetchDogInfo() {
-//  const url = 'https://dog.ceo/api/breeds/image/random';
-//  var res = fetch(url);
-//  var data = res.json;
-//  var msg = data.status;
-//  alert(msg);
-  
-//}
+// Our Functions (3)
 
 
 async function fetchDogInfo() {
@@ -45,4 +38,8 @@ function extractBreed(url) {
   const breedPath = url.split('/breeds/')[1];
   const breedName = breedPath.split('/')[0];
   name_.textContent = breedName;
+}
+
+function displayMenu() {
+  alert('I am the menu.');
 }
